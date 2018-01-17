@@ -1,9 +1,9 @@
 package com.pavel.kopiyko.abstractadapter;
 
 public class ViewHolderData {
-    final int viewType;
-    final Object data;
-    final String key;
+    public final int viewType;
+    public final Object data;
+    public final String key;
 
     public ViewHolderData(int viewType, Object data, String key) {
         this.viewType = viewType;

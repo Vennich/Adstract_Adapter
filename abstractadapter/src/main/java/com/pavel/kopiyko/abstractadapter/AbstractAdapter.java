@@ -29,26 +29,26 @@ public class AbstractAdapter extends RecyclerView.Adapter<AbstractViewHolder> {
         data.clear();
     }
 
-    void add(ViewHolderData item) {
+    public void add(ViewHolderData item) {
         data.add(item);
         notifyItemInserted(data.size());
     }
 
-    void add(int position, ViewHolderData item) {
+    public void add(int position, ViewHolderData item) {
         data.add(position, item);
 
         notifyItemInserted(position);
     }
 
-    ViewHolderData get(int position) {
+    public ViewHolderData get(int position) {
         return data.get(position);
     }
 
-    ViewHolderData get(String key) {
+    public ViewHolderData get(String key) {
         return data.get(key);
     }
 
-    void set(int position, ViewHolderData item) {
+    public void set(int position, ViewHolderData item) {
         data.set(position, item);
         notifyItemChanged(position);
     }
@@ -99,11 +99,11 @@ public class AbstractAdapter extends RecyclerView.Adapter<AbstractViewHolder> {
     public static class Builder {
         private SparseArray<HolderFactory> factories;
 
-        Builder() {
+        public Builder() {
             factories = new SparseArray<>(3);
         }
 
-        Builder(int initialCapacity) {
+        public Builder(int initialCapacity) {
             factories = new SparseArray<>(initialCapacity);
         }
 
@@ -118,7 +118,6 @@ public class AbstractAdapter extends RecyclerView.Adapter<AbstractViewHolder> {
                         "\nuse addFactory() Builder's method");
             }
 
-            factories = null;
             return new AbstractAdapter(factories);
         }
     }
