@@ -8,5 +8,5 @@ public abstract class AbstractViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
     }
 
-    public abstract void setData(ViewHolderData data);
+    public abstract void setData(int position, ViewHolderData data);
 }
