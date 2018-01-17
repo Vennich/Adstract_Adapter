@@ -34,6 +34,12 @@ public class AbstractAdapter extends RecyclerView.Adapter<AbstractViewHolder> {
         notifyItemInserted(data.size());
     }
 
+    void add(int position, ViewHolderData item) {
+        data.add(position, item);
+
+        notifyItemInserted(position);
+    }
+
     ViewHolderData get(int position) {
         return data.get(position);
     }

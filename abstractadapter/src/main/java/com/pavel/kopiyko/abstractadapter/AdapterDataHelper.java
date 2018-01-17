@@ -40,6 +40,15 @@ class AdapterDataHelper {
         data.add(item);
     }
 
+    void add(int position, ViewHolderData item) {
+        if (position > data.size()) {
+            throw new IndexOutOfBoundsException("Can't add item to position " + position + ". \n" +
+                    "data size is " + data.size());
+        }
+
+        data.add(position, item);
+    }
+
 
     ViewHolderData get(int position) {
         return data.get(position);
