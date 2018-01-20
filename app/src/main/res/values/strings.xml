@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Abstract Adapter Example</string>
+
+    <string name="type_1">type 1</string>
+    <string name="type_2">type 2</string>
+    <string name="type_3">type 3</string>
+
+    <string name="add_type_1">Add 1</string>
+    <string name="add_type_2">Add 2</string>
+    <string name="add_type_3">Add 3</string>
+</resources>
