@@ -10,7 +10,7 @@ import com.pavel.kopiyko.absctractadapterexample.adapter.factories.ViewHolderThr
 import com.pavel.kopiyko.absctractadapterexample.adapter.factories.ViewHolderTwoFactory
 import com.pavel.kopiyko.abstractadapter.AbstractAdapter
 
-class MainActivity : AppCompatActivity(), RemoveItemListener, View.OnClickListener {
+public class MainActivity : AppCompatActivity(), RemoveItemListener, View.OnClickListener {
 
     private lateinit var recycler : RecyclerView
 
@@ -48,8 +48,8 @@ class MainActivity : AppCompatActivity(), RemoveItemListener, View.OnClickListen
     override fun onClick(view: View) {
         when (view.id) {
             R.id.add_item_1 -> adapter.add(factoryOne.createHolderData("For example", ""))
-            R.id.add_item_2 -> adapter.add(factoryTwo.createHolderData("This text can", ""))
-            R.id.add_item_3 -> adapter.add(factoryThree.createHolderData("Print. But I don't wont", ""))
+            R.id.add_item_2 -> adapter.add(factoryTwo.createHolderData("This text can print.", ""))
+            R.id.add_item_3 -> adapter.add(factoryThree.createHolderData("But I don't wont", ""))
         }
     }
 
