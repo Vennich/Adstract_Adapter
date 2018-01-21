@@ -171,6 +171,7 @@ And now implement it on your View's class and provide to Factory listener:
 ### Other 
 ***
 It my first library and I will be glad to see your comments and advices. 
+
 License
 ----
 MIT
