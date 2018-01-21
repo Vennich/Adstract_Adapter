@@ -21,9 +21,11 @@ class ViewHolderType1(itemView: View,
     }
 
     override fun onClick(p0: View) {
-        onRemoveItemListener.onRemove(adapterPosition)
-        //remove click listener, 'cause while animation running
-        //can tap on it and it will cause of Exception or wrong behavior
-        itemView.setOnClickListener(null)
+        if (adapterPosition == -1) {
+            //animation running and we are trying don't need to remove already removing view
+            //it will cause of Exception or wrong behavior
+        } else {
+            onRemoveItemListener.onRemove(adapterPosition)
+        }
     }
 }
