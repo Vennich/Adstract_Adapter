@@ -35,7 +35,7 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:26.1.0'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    compile project(":abstractadapter")
+    implementation project(':abstractadapter')
 
     androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.1'
     androidTestCompile 'com.android.support.test.espresso:espresso-contrib:3.0.1'
